@@ -1,0 +1,25 @@
+root: true
+extends:
+  - eslint:recommended
+  - plugin:@typescript-eslint/recommended
+  - plugin:react/recommended
+plugins:
+  - "@emotion"
+rules:
+  "@emotion/no-vanilla": error
+  react/jsx-uses-react: off
+  react/react-in-jsx-scope: off
+  react/prop-types: off
+  "@typescript-eslint/no-non-null-assertion": off
+  "@typescript-eslint/no-explicit-any": off
+  "@typescript-eslint/no-unused-vars": off
+  "react/no-unknown-property":
+    - error
+    - ignore:
+        - css
+overrides:
+  - files:
+      - src/**/*.{js,jsx,ts,tsx}
+settings:
+  react:
+    version: detect
